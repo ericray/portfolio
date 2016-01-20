@@ -1,5 +1,0 @@
-<?
-define('BASE_URL','http://mce-desarrollo.utmetropolitana.edu.mx/~a10090823/www/Proyecto/ritmann/');
-define('TITLE','Ritmann|Perfección en Cada Pieza| Uniformes industriales. Uniformes Empresariales. Uniformes Ejecutivos. Calzado Industrial.');
-define('DESCRIPTION','Fabricamos Uniformes Empresariales, Ejecutivos, Corporativos y Uniformes Industriales. Entre nuestros productos se destacan las Camisas Tipo Polo, Camisolas Industriales, Pantalones Industriales, Uniformes Gasolineras, Bordado de Gorras, Calzado Industrial Berrendo y Zapatos de Seguridad Puma, Batas, Overoles, Filipinas para Chef, Uniformes para Restaurant, Uniformes para Hoteles, Artículos promocionales, Protección industrial, Fajas Sacrolumbares, etc. UNIFORMES RITMANN MÉXICO se distingue por proveer, con la mejor atención, calidad y precio a las ciudades de Campeche, Cd. del Carmen, Mérida, Villahermosa, Cancún y Riviera Maya. RITMANN MÉXICO, PERFECCIÓN EN CADA PIEZA');
-?>

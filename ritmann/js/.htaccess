@@ -1,2 +1,0 @@
-RewriteEngine on
-RewriteRule ^producto/(.+)$  http://mce-desarrollo.utmetropolitana.edu.mx/~a10090098/www/Bluebymagos/Ficha_producto.php?clave=$1 [L]
