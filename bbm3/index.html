@@ -11,7 +11,7 @@
 		<title>Bleubymagos</title>
 		<link href="imagenes/favicon.ico" type="image/x-icon" rel="shortcut icon" />
 		<link href="css/960.css" rel="stylesheet" type="text/css" />
-		<link href="css/Bleubymagos.php" rel="stylesheet" type="text/css" />
+		<link href="css/style.css" rel="stylesheet" type="text/css" />
 		<link href="css/screen.css" rel="stylesheet" type="text/css" media="screen"/>
 		<link  href="css/jquery-ui-1.8.18.custom.css" rel="stylesheet" type="text/css" media="screen"/>
 		<script src="js/jquery.js" type="text/javascript"></script>
@@ -40,7 +40,7 @@
 							&nbsp;
 						</div>
 						<div id="menu" class="grid_4 omega">
-							<a href="index.php">Inicio</a> | <a href="Empresa/quienes_somos.php">Acerca de nosotros</a> | <a href="index.php">Contacto</a> | <a href="index.php">Ofertas</a>
+							<a href="index.html">Inicio</a> | <a href="index.html">Acerca de nosotros</a> | <a href="index.html">Contacto</a> | <a href="index.html">Ofertas</a>
 						</div>
 					</div>
 				
@@ -55,7 +55,7 @@
 						
 						<div id="cabecerasubir" class="grid_12 alpha omega">
 							<div id="logo" class="grid_4 alpha">
-								<a href="index.php"><img src="imagenes/Bluebymagos.png" /></a>
+								<a href="index.html"><img src="imagenes/Bluebymagos.png" /></a>
 							</div>
 							<div class="grid_4 ">
 								<!-- imagenesTemporada(9) -->
@@ -73,14 +73,15 @@
 												var precio = $("input[name=precio]", this).val();
 												var status = $("input[name=status]", this).val();
 												//var submit = $("input[name=submit]", this).val();
-												var url = "blueMagos/operaciones_carro.php?id_producto="+id_producto+"&cantidad="+cantidad+"&precio="+precio+"&status="+status+"&submit=Agregar&TB_iframe=true&height=400&width=780";
+												/*var url = "blueMagos/operaciones_carro.php?id_producto="+id_producto+"&cantidad="+cantidad+"&precio="+precio+"&status="+status+"&submit=Agregar&TB_iframe=true&height=400&width=780";*/
+												var url = 'index.html';
 												tb_show(title, url, false);
 												return false;
 											});
 										});
 									</script>
 
-									<form id="text" action="index.php">
+									<form id="text" action="index.html">
 										<input id="search" name="criterio" type="search" results=5 value="" placeholder="Buscar..."/>
 										<input id="btn1" class="button medium blue"  name="" type="submit" value="Buscar"/>
 									</form>
@@ -92,7 +93,7 @@
 									</div>
 									<div id="importe" class="grid_3 omega">
 										<!-- genera_mporte_nombre() -->
-										<a id="link2" href="blueMagos/Detalle_carro.php">2 Productos | $100</a>
+										<a id="link2" href="index.html">2 Productos | $100</a>
 									</div>
 								</div>
 							</div>
@@ -130,7 +131,7 @@
 									</div>
 									<div class="grid_2 alpha omega">
 										<ul>
-											<li id="li"><a href="index.php">Todos</a></li>
+											<li id="li"><a href="index.html">Todos</a></li>
 											<!-- -->
 										</ul>
 									</div>
@@ -147,7 +148,7 @@
 										<img src="imagenes/filtro.png" />
 									</div>
 									<div id="filtros" class="grid_2 alpha omega">
-										<form class="cmxform" id="commentForm" action="index.php">
+										<form class="cmxform" id="commentForm" action="index.html">
 											<input name="criterio" type="hidden" value=""/>
 											Ordenar productos por: <br>
 											<select title="Ordenar Productos por" name="ordenador"  style="width: 140px">
@@ -182,34 +183,10 @@
 								<label id="movercategoria">Categoría Regalos</label>
 							</div>
 							<div class="clear"></div>
-							<div id="cartelera"  class="grid_9 alpha omega">
-								<?
-									$por_fila=3;
-									$contador=1;
-									$contador_css=0;
-								?>
-								<? for($i=1;$i < 6; $i++): ?>
-								<?
-									$contador_css++;
-									$temporal_css='';
-
-									if($contador_css>3){
-										$temporal_css=' id="mover" ';
-									}
-										
-									$temporal_alpha='';
-
-									if($contador==1){
-										$temporal_alpha=' alpha ';
-									}
-
-									$temporal_omega='';
-
-									if($contador==3) $temporal_omega=' omega ';
-								?>
-								<div <?= $temporal_css ?> class="grid_3 <?= $temporal_alpha.' '.$temporal_omega ?>">
+							<div id="cartelera" class="grid_9 alpha omega">
+																																<div class="grid_3  alpha  ">
 									<div id="marcado" class="grid_3 alpha omega">
-										<a href="producto/'.$elemento['clave'].'"><img id="imgcartelera" src="img_ocasion/<?=$i ?>.jpg" width="158" height="116" border="0" title="'.$elemento['nombreproducto'].'" /></a>
+										<a href="producto/'.$elemento['clave'].'"><img id="imgcartelera" src="img_ocasion/1.jpg" width="158" height="116" border="0" title="'.$elemento['nombreproducto'].'"></a>
 										<div id="producto" class="grid_3 alpha omega">
 										   <label id="tamano">
 												<a href="producto/1">Invitación</a>
@@ -226,12 +203,12 @@
 										
 										<div id="producto" class="grid_3 alpha omega">
 											<div id="botoncarro" class="grid_3 alpha omega">
-												<form class="cart_form" action="cart.php" method="get">
-													<input type="hidden" name="id_producto" value="1"/>
-													<input name="cantidad" type="hidden" value="1"/>
-													<input name="precio" type="hidden" value="100"/>
-													<input name="status" type="hidden" value="1" />
-													<input type="submit" id="acomodarbotoncarro" class="button medium blue" name="submit" value="Agregar" />
+												<form class="cart_form" action="index.html" method="get">
+													<input type="hidden" name="id_producto" value="1">
+													<input name="cantidad" type="hidden" value="1">
+													<input name="precio" type="hidden" value="100">
+													<input name="status" type="hidden" value="1">
+													<input type="submit" id="acomodarbotoncarro" class="button medium blue" name="submit" value="Agregar">
 												</form>
 											
 											</div>
@@ -244,14 +221,155 @@
 													   
 									</div>
 								</div>
-								<?
-									if($contador==$por_fila){
-									   echo '<div class="clear"></div>';
-									   $contador=1;
-									}
-									else $contador++;
-								?>
-								<? endfor ?>	
+																																<div class="grid_3  ">
+									<div id="marcado" class="grid_3 alpha omega">
+										<a href="producto/'.$elemento['clave'].'"><img id="imgcartelera" src="img_ocasion/2.jpg" width="158" height="116" border="0" title="'.$elemento['nombreproducto'].'"></a>
+										<div id="producto" class="grid_3 alpha omega">
+										   <label id="tamano">
+												<a href="producto/1">Invitación</a>
+										   </label>
+										</div>
+										
+										<div class="clear"></div>
+										
+										<div id="producto" class="grid_3 alpha omega">
+											<label> $400</label>
+										</div>
+										
+										<div class="clear"></div>
+										
+										<div id="producto" class="grid_3 alpha omega">
+											<div id="botoncarro" class="grid_3 alpha omega">
+												<form class="cart_form" action="index.html" method="get">
+													<input type="hidden" name="id_producto" value="1">
+													<input name="cantidad" type="hidden" value="1">
+													<input name="precio" type="hidden" value="100">
+													<input name="status" type="hidden" value="1">
+													<input type="submit" id="acomodarbotoncarro" class="button medium blue" name="submit" value="Agregar">
+												</form>
+											
+											</div>
+											
+											<div class="clear"></div>
+											
+										</div>
+										
+										<div class="clear"></div>
+													   
+									</div>
+								</div>
+																																<div class="grid_3   omega ">
+									<div id="marcado" class="grid_3 alpha omega">
+										<a href="producto/'.$elemento['clave'].'"><img id="imgcartelera" src="img_ocasion/3.jpg" width="158" height="116" border="0" title="'.$elemento['nombreproducto'].'"></a>
+										<div id="producto" class="grid_3 alpha omega">
+										   <label id="tamano">
+												<a href="producto/1">Invitación</a>
+										   </label>
+										</div>
+										
+										<div class="clear"></div>
+										
+										<div id="producto" class="grid_3 alpha omega">
+											<label> $400</label>
+										</div>
+										
+										<div class="clear"></div>
+										
+										<div id="producto" class="grid_3 alpha omega">
+											<div id="botoncarro" class="grid_3 alpha omega">
+												<form class="cart_form" action="index.html" method="get">
+													<input type="hidden" name="id_producto" value="1">
+													<input name="cantidad" type="hidden" value="1">
+													<input name="precio" type="hidden" value="100">
+													<input name="status" type="hidden" value="1">
+													<input type="submit" id="acomodarbotoncarro" class="button medium blue" name="submit" value="Agregar">
+												</form>
+											
+											</div>
+											
+											<div class="clear"></div>
+											
+										</div>
+										
+										<div class="clear"></div>
+													   
+									</div>
+								</div>
+								<div class="clear"></div>																								<div id="mover" class="grid_3  alpha  ">
+									<div id="marcado" class="grid_3 alpha omega">
+										<a href="producto/'.$elemento['clave'].'"><img id="imgcartelera" src="img_ocasion/4.jpg" width="158" height="116" border="0" title="'.$elemento['nombreproducto'].'"></a>
+										<div id="producto" class="grid_3 alpha omega">
+										   <label id="tamano">
+												<a href="producto/1">Invitación</a>
+										   </label>
+										</div>
+										
+										<div class="clear"></div>
+										
+										<div id="producto" class="grid_3 alpha omega">
+											<label> $400</label>
+										</div>
+										
+										<div class="clear"></div>
+										
+										<div id="producto" class="grid_3 alpha omega">
+											<div id="botoncarro" class="grid_3 alpha omega">
+												<form class="cart_form" action="index.html" method="get">
+													<input type="hidden" name="id_producto" value="1">
+													<input name="cantidad" type="hidden" value="1">
+													<input name="precio" type="hidden" value="100">
+													<input name="status" type="hidden" value="1">
+													<input type="submit" id="acomodarbotoncarro" class="button medium blue" name="submit" value="Agregar">
+												</form>
+											
+											</div>
+											
+											<div class="clear"></div>
+											
+										</div>
+										
+										<div class="clear"></div>
+													   
+									</div>
+								</div>
+																																<div id="mover" class="grid_3  ">
+									<div id="marcado" class="grid_3 alpha omega">
+										<a href="producto/'.$elemento['clave'].'"><img id="imgcartelera" src="img_ocasion/5.jpg" width="158" height="116" border="0" title="'.$elemento['nombreproducto'].'"></a>
+										<div id="producto" class="grid_3 alpha omega">
+										   <label id="tamano">
+												<a href="producto/1">Invitación</a>
+										   </label>
+										</div>
+										
+										<div class="clear"></div>
+										
+										<div id="producto" class="grid_3 alpha omega">
+											<label> $400</label>
+										</div>
+										
+										<div class="clear"></div>
+										
+										<div id="producto" class="grid_3 alpha omega">
+											<div id="botoncarro" class="grid_3 alpha omega">
+												<form class="cart_form" action="index.html" method="get">
+													<input type="hidden" name="id_producto" value="1">
+													<input name="cantidad" type="hidden" value="1">
+													<input name="precio" type="hidden" value="100">
+													<input name="status" type="hidden" value="1">
+													<input type="submit" id="acomodarbotoncarro" class="button medium blue" name="submit" value="Agregar">
+												</form>
+											
+											</div>
+											
+											<div class="clear"></div>
+											
+										</div>
+										
+										<div class="clear"></div>
+													   
+									</div>
+								</div>
+																	
 							</div>
 							<div class="clear"></div>
 						</div>
