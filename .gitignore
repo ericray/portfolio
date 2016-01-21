@@ -3,7 +3,8 @@
 *.php
 /sfgp
 /ritmann
-/gap
+/gap/Views
+/gap/procesos
 
 #PHPStorm
 .idea/
