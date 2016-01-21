@@ -1,7 +1,7 @@
 #App
 #----------------#
 *.php
-/ritmann
+/ritmann/config
 /gap/Views
 /gap/procesos
 
