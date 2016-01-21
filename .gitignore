@@ -1,7 +1,6 @@
 #App
 #----------------#
 *.php
-/sfgp
 /ritmann
 /gap/Views
 /gap/procesos
